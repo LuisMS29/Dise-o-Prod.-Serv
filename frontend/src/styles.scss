@@ -1,0 +1,200 @@
+/* ============================================
+   AGROPREDICE PERU - ESTILOS GLOBALES
+   Paleta de colores segun documento APF3
+   ============================================ */
+
+// Variables de colores
+:root {
+  --verde-oscuro: #2E7D32;
+  --verde-claro: #69F0AE;
+  --amarillo: #FFD740;
+  --rojo: #FF5252;
+  --azul: #1976D2;
+  --naranja: #FF6F00;
+  --gris-claro: #F5F5F5;
+  --blanco: #FFFFFF;
+  --gris-oscuro: #424242;
+  --gris-texto: #757575;
+}
+
+// Reset y base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--blanco);
+  color: var(--gris-oscuro);
+  -webkit-font-smoothing: antialiased;
+}
+
+// Tipografia segun documento
+.titulo-pantalla {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--gris-oscuro);
+  line-height: 1.3;
+}
+
+.texto-alerta-critica {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--blanco);
+}
+
+.cuerpo-texto {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gris-oscuro);
+  line-height: 1.5;
+}
+
+.texto-secundario {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--gris-texto);
+}
+
+// Botones segun paleta
+.btn-primario {
+  background-color: var(--azul) !important;
+  color: var(--blanco) !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  min-height: 48px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-accion {
+  background-color: var(--naranja) !important;
+  color: var(--blanco) !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 50% !important;
+  width: 72px !important;
+  height: 72px !important;
+  box-shadow: 0 4px 8px rgba(255, 111, 0, 0.3);
+}
+
+.btn-emergencia {
+  background-color: var(--rojo) !important;
+  color: var(--blanco) !important;
+}
+
+.btn-exito {
+  background-color: var(--verde-oscuro) !important;
+  color: var(--blanco) !important;
+}
+
+.btn-secundario {
+  background-color: var(--gris-claro) !important;
+  color: var(--gris-oscuro) !important;
+}
+
+// Semaforo
+.semaforo-verde {
+  background-color: var(--verde-claro);
+  color: var(--gris-oscuro);
+}
+
+.semaforo-amarillo {
+  background-color: var(--amarillo);
+  color: var(--gris-oscuro);
+}
+
+.semaforo-rojo {
+  background-color: var(--rojo);
+  color: var(--blanco);
+  animation: pulse-rojo 2s infinite;
+}
+
+@keyframes pulse-rojo {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+// Cards y contenedores
+.card-agro {
+  background: var(--blanco);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+// Menu inferior
+.menu-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--blanco);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--gris-texto);
+  text-decoration: none;
+  font-size: 12px;
+
+  .material-icons {
+    font-size: 28px;
+    margin-bottom: 2px;
+  }
+
+  &.activo {
+    color: var(--azul);
+  }
+}
+
+// Utilidades
+.text-center { text-align: center; }
+.w-100 { width: 100%; }
+.mt-16 { margin-top: 16px; }
+.mb-16 { margin-bottom: 16px; }
+.p-16 { padding: 16px; }
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gris-claro);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gris-texto);
+  border-radius: 3px;
+}
+
+// Responsive
+@media (max-width: 600px) {
+  .titulo-pantalla {
+    font-size: 20px;
+  }
+
+  .texto-alerta-critica {
+    font-size: 24px;
+  }
+}
