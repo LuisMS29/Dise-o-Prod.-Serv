@@ -5,8 +5,8 @@ Sistema inteligente de alertas climáticas para agricultores.
 
 ## Tecnologías
 - Angular
-- Node.js
-- Express
+- SPRING BOOT
+- API
 - MySQL
 - IA para análisis de cultivos
 
